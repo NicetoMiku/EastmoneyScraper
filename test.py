@@ -1,12 +1,14 @@
-import re
+input_file_path = "eastmoneypageurl.txt"
+output_file_path = "eastmoneypageurl.txt"
+# Read lines from the input file and store them in a list
+with open(input_file_path, 'r') as input_file:
+    lines = input_file.readlines()
 
-input_string = "The important text is between <start> and <end> tags."
+# Sort the lines in the list
+lines.sort()
 
-# Search for the text between '<start>' and '<end>'
-match = re.search(r'<start>(.*?)<end>', input_string)
+# Write the sorted lines back to the output file
+with open(output_file_path, 'w') as output_file:
+    output_file.writelines(lines)
 
-if match:
-    extracted_text = match.group(1)
-    print("Extracted text:", extracted_text)
-else:
-    print("No match found.")
+print("File sorted and saved to", output_file_path)
