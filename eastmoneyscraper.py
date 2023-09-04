@@ -123,7 +123,7 @@ for i in range(total_pages):
         print(f"An exception occurred while scraping {url}: {e}")
         # Continue to the next URL
         with open('eastmoneypageurlfailed.txt', 'a') as failedurl:
-            failedurl.write(url)
+            failedurl.write(url+ '\n')
         j += 1
         i += 1
         continue
@@ -167,7 +167,7 @@ for i in range(total_pages):
     except Exception as e:
         print(f"An error occurred: {e}")
         with open('eastmoneypageurlfailed.txt', 'a') as failedurl:
-            failedurl.write(url)
+            failedurl.write(url+ '\n')
         j += 1
         i += 1
         continue
