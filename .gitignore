@@ -3,4 +3,4 @@
 # Ignore configuration files
 # .env
 # .config/
-.sql
+*.sql
