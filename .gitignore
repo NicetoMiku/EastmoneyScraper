@@ -1,0 +1,7 @@
+# Ignore build artifacts
+eastmoneyarticles.sql
+eastmoneyarticles copy.sql
+
+# Ignore configuration files
+# .env
+# .config/
